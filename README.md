@@ -6,7 +6,7 @@ This pregetto makes the management of the sql language more "python"
 	The function ```create_table``` is like "CREATE TABLE" in sql
 	and is structured like this:
 	```
-	create_table(table, exist=False,  **kargs)
+	create_table(table, exist=False,  **kwargs)
 	```
 	```table```: table name<br>
 	```exist```: adds the "IF NOT EXISTS" control if param is ```True```<br>
@@ -165,7 +165,7 @@ This pregetto makes the management of the sql language more "python"
 # Conditions
 
 Conditions are managed like:
-keys of *\*kargs are the elements to compare with the value of the **kargs,
+keys of *\*kargs are the elements to compare with the value of the **kwargs,
 default operator is ```equal```
 and default logic operator is ```AND```
 
@@ -204,7 +204,7 @@ To change the operator the value is a list [operatior, value]
 #### SQL ####
 
 ```
-SELECT name
+SELECT id
 FROM prova
 WHERE id <> '7'
 ```
@@ -228,7 +228,7 @@ To change the logic operator the value is a list [value, logic operator] or [ope
 #### SQL ####
 
 ```
-SELECT name
+SELECT id
 FROM prova
 WHERE id <> '7'
 OR name = 'Mike'
